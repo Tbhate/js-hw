@@ -3,3 +3,12 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+const duvEl= document.querySelector('.widget');
+const spanEl = document.querySelector('.color');
+const btnEl = document.querySelector('.change-color');
+
+btnEl.addEventListener('click', () => {
+  spanEl.textContent = getRandomHexColor();
+  duvEl.parentNode.style.backgroundColor = spanEl.textContent;
+})
